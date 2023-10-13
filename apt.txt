@@ -1,0 +1,8 @@
+build-essential
+subversion
+m4
+python3-dev 
+libssl-dev
+libgmp-dev
+flex
+bison
