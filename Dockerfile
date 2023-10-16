@@ -3,10 +3,7 @@ FROM python:slim
 RUN apt update && apt install --yes git build-essential subversion flex bison wget subversion m4 python3 python3-dev python3-setuptools libgmp-dev libssl-dev
 
 # install the notebook package
-RUN pip install --no-cache --upgrade pip 
-RUN pip install --no-cache notebook 
-RUN pip install --no-cache cryptography
-
+RUN pip install --no-cache --upgrade pip
 
 # create user with a home directory
 ARG NB_USER
@@ -19,7 +16,13 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 WORKDIR ${HOME}
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
 USER ${USER}
+
+
 
 RUN mkdir ${HOME}/notebooks && chown ${NB_USER} ${HOME}/notebooks
 
