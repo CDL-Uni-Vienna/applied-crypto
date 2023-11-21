@@ -2,3 +2,6 @@ notebook
 numpy 
 matplotlib
 cryptography
+qiskit[visualization]
+qiskit-aer
+pyzx

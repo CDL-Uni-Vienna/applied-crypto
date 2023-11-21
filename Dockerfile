@@ -1,6 +1,6 @@
-FROM python:slim
+FROM python:3.11-slim
 
-RUN apt update && apt install --yes git build-essential subversion flex bison wget subversion m4 python3 python3-dev python3-setuptools libgmp-dev libssl-dev
+RUN apt update && apt install --yes git build-essential subversion flex bison wget subversion m4 python3 python3-dev python3-setuptools libgmp-dev libssl-dev cmake libgmp-dev libmpfr-dev libmpc-dev 
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip
@@ -19,6 +19,7 @@ WORKDIR ${HOME}
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
+
 
 USER ${USER}
 
