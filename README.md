@@ -36,7 +36,7 @@ We strongly encourage you to try out this method, as we cannot guarantee the ava
 7.	Run the docker container On some operating systems, you may have to run this command as root:
 ```docker run -p 8888:8888 applied-crypto jupyter notebook --ip=0.0.0.0 --port=8888```
   - If you wish to access the jupyter notebooks on your local hard disk, you can run the docker command as follows:
-    ```docker run -v <full path to your notebooks>:/home/jovyan/notebooks/mount -p 8888:8888 moderncrypto jupyter notebook --ip=0.0.0.0 --port=8888```
+    ```docker run -v <full path to your notebooks>:/home/jovyan/notebooks/mount -p 8888:8888 applied-crypto jupyter notebook --ip=0.0.0.0 --port=8888```
 8.	Your command prompt should output something similar to the following:
 ```
 To access the server, open this file in a browser:
