@@ -4,4 +4,4 @@ matplotlib
 cryptography
 qiskit[visualization]
 qiskit-aer
-pyzx
+qiskit_algorithms
